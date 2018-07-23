@@ -1,23 +1,23 @@
 import React from "react";
 
-class Header extends React.Component {
-   render() {
-     return (
-        <header ClassName="top">
+
+const Header = (props) => (
+    <header className="top">
           <h1>
             Catch
-            <span className= "ofThe">
-              <span className= "of">Of</span>
-              <span className= "the">The</span>
+            <span className="ofThe">
+              <span className="of">Of</span>
+              <span className="the">The</span>
             </span>
             Day
           </h1>
-          <h3 ClassName="tagline">
-            <span> Fresh Seafood Market</span>
+          <h3 className="tagline">
+            <span>
+              {props.tagline}
+            </span>
           </h3>
-        </header>
-      );
-   }
-}
+    </header>
+    );
+
 
 export default Header;
