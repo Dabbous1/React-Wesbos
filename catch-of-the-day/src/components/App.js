@@ -18,7 +18,7 @@ addFish = (fish) => {
 }
 
 addToOrder = key => {
-  const order = {...this.state.orders};
+  const order = { ...this.state.order };
   order[key] = order[key] + 1 || 1;
   this.setState({ order });
 }
@@ -41,7 +41,7 @@ addToOrder = key => {
               addToOrder={this.addToOrder} />)}
           </ul>
         </div>
-         <Order />
+         <Order fishes={this.state.fishes} order={this.state.order} />
          <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
